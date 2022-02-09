@@ -1,3 +1,7 @@
+from music.album import Album
+from music.artist import Artist
+from music.song import Song
+
 
 def albums_parser(data_files):
     all_albums = []
