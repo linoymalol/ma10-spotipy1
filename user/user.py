@@ -9,10 +9,11 @@ class User:
 
     def __repr__(self):
         return f'id: {self.id} name: {self.name} playlist: {self.playlists}'
+
     def create_playlist(self, name, songs):
         info_log(__name__, self.create_playlist.__name__, "Entered into the function")
         if name not in self.playlists.keys():
             self.playlists[name] = songs
             info_log(__name__, self.create_playlist.__name__, "The function ended successfully")
         else:
-            error_log(__name__, self.create_playlist.__name__, "the playlist name already exist")
+            error_log(__name__, self.create_playlist.__name__, f"the playlist name: {name} - is already exist")
